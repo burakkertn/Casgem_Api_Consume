@@ -1,0 +1,17 @@
+﻿@model Casgem_Api_Consume.Dtos.CategoryDtos.UpdateCategory
+@{
+    ViewData["Title"] = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<form action="method">
+    <label> Kategori Adı </label>
+    <input type="text" class="form-control border" asp-for="categoryName" />
+    <br />
+    <button class="btn bs-tooltip-start">Kaydet</button>
+
+
+</form>
+

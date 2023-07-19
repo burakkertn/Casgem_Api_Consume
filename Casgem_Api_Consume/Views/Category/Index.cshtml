@@ -1,0 +1,26 @@
+﻿@model List<Casgem_Api_Consume.Dtos.CategoryDtos.ResultCategoryDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1>Kategori Listesi</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.categoryID</td>
+            <td>@item.categoryName</td>
+            <td><a href="/Category/DeleteCategory/@item.categoryID" class="btn btn-primary">Sil</a></td>
+            <td><a href="/Category/UpdateCategory/@item.categoryID" class="btn btn-primary">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Category/AddCategory" class="btn btn-primary">Yeni Kategori Ekle</a>
